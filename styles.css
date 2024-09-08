@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    background-color: #0073e6;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    max-height: 50px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    padding: 50px;
+    text-align: center;
+}
+
+.hero {
+    background-color: white;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.download-box {
+    display: inline-flex;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.download-box input {
+    flex: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.download-box button {
+    padding: 10px 20px;
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    transition: background-color 0.3s ease;
+}
+
+.download-box button:hover {
+    background-color: #005bb5;
+}
+
+.features {
+    margin-top: 50px;
+}
+
+.features h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.features ul {
+    list-style: none;
+    padding-left: 0;
+    font-size: 18px;
+}
+
+.features ul li {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color: #005bb5;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 14px;
+    margin-top: 50px;
+}
+
+/* Content section styling for additional pages */
+.content {
+    padding: 50px;
+    background-color: white;
+    margin: 50px auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.content h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.content p, .content ol {
+    font-size: 18px;
+}
+
+footer p {
+    margin: 0;
+}
