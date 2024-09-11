@@ -8,41 +8,55 @@
 </head>
 <body>
     <header>
-        <div class="logo">
-            <img src="logo.png" alt="DownloadDash Logo" />
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="DownloadDash Logo" />
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="how-it-works.html">How It Works</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="how-it-works.html">How It Works</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
     </header>
 
     <main>
         <section class="hero">
-            <h1>Download Your Favorite Videos Instantly</h1>
-            <p>Simply paste the video link below and click download.</p>
-            <div class="download-box">
-                <input type="text" id="videoLink" placeholder="Enter video URL here...">
-                <button onclick="downloadVideo()">Download</button>
+            <div class="container">
+                <h1>Download Any Video Online</h1>
+                <p>Easily download videos from all popular platforms with DownloadDash.</p>
+                
+                <div class="download-box">
+                    <input type="text" id="videoLink" placeholder="Enter video URL here...">
+                    <button onclick="downloadVideo()">Download</button>
+                </div>
+
+                <div class="disclaimer">
+                    <p>Note: Supported platforms include YouTube, Facebook, Instagram, and more.</p>
+                </div>
             </div>
         </section>
 
         <section class="features">
-            <h2>Why DownloadDash?</h2>
-            <ul>
-                <li>Fast and reliable video downloading.</li>
-                <li>Supports various video platforms.</li>
-                <li>Completely free to use.</li>
-            </ul>
+            <div class="container">
+                <h2>Why Choose DownloadDash?</h2>
+                <ul>
+                    <li>Free, fast, and unlimited downloads.</li>
+                    <li>Supports all major platforms and video formats.</li>
+                    <li>No account needed. No hidden fees.</li>
+                </ul>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 DownloadDash. All rights reserved.</p>
+        <div class="container">
+            <p>&copy; 2024 DownloadDash. All rights reserved.</p>
+        </div>
     </footer>
 
+    <script src="app.js"></script>
 </body>
 </html>
