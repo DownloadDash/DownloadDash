@@ -1,3 +1,4 @@
+/* Global Styles */
 * {
     margin: 0;
     padding: 0;
@@ -6,20 +7,22 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f0f0f0;
 }
 
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header Styling */
 header {
-    background-color: #0073e6;
-    color: white;
-    padding: 15px;
-    text-align: center;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    background-color: #004c99;
+    padding: 20px 0;
 }
 
-header .logo img {
+.logo img {
     max-height: 50px;
 }
 
@@ -44,47 +47,46 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
-main {
-    padding: 50px;
-    text-align: center;
-}
-
+/* Hero Section */
 .hero {
     background-color: white;
-    padding: 50px;
-    border-radius: 8px;
+    padding: 100px 0;
+    text-align: center;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 50px;
 }
 
 .hero h1 {
     font-size: 36px;
     margin-bottom: 20px;
+    color: #333;
 }
 
 .hero p {
     font-size: 18px;
-    margin-bottom: 30px;
+    color: #666;
+    margin-bottom: 40px;
 }
 
 .download-box {
     display: inline-flex;
-    width: 100%;
     max-width: 600px;
     margin: 0 auto;
 }
 
 .download-box input {
     flex: 1;
-    padding: 10px;
+    padding: 15px;
     font-size: 16px;
-    border: 1px solid #ddd;
+    border: 2px solid #ddd;
+    border-right: none;
     border-radius: 5px 0 0 5px;
     outline: none;
 }
 
 .download-box button {
-    padding: 10px 20px;
-    background-color: #0073e6;
+    padding: 15px 30px;
+    background-color: #004c99;
     color: white;
     border: none;
     font-size: 16px;
@@ -94,56 +96,49 @@ main {
 }
 
 .download-box button:hover {
-    background-color: #005bb5;
+    background-color: #003366;
 }
 
+.disclaimer {
+    margin-top: 15px;
+}
+
+.disclaimer p {
+    font-size: 14px;
+    color: #888;
+}
+
+/* Features Section */
 .features {
-    margin-top: 50px;
+    padding: 50px 0;
+    background-color: #fafafa;
 }
 
 .features h2 {
     font-size: 28px;
     margin-bottom: 20px;
+    text-align: center;
+    color: #333;
 }
 
 .features ul {
     list-style: none;
-    padding-left: 0;
+    padding: 0;
     font-size: 18px;
+    color: #555;
+    text-align: center;
 }
 
 .features ul li {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
+/* Footer Section */
 footer {
-    background-color: #005bb5;
+    background-color: #333;
     color: white;
     text-align: center;
     padding: 15px 0;
     font-size: 14px;
     margin-top: 50px;
-}
-
-/* Content section styling for additional pages */
-.content {
-    padding: 50px;
-    background-color: white;
-    margin: 50px auto;
-    max-width: 800px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.content h1 {
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-
-.content p, .content ol {
-    font-size: 18px;
-}
-
-footer p {
-    margin: 0;
 }
