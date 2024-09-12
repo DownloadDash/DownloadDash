@@ -23,7 +23,7 @@ async function downloadVideo() {
         }, 500);
 
         // API call to get the download link (replace with actual API)
-        const response = await fetch('https://api.video-downloader.com/fetch', {
+        const response = await fetch('13.55.112.219', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
