@@ -8,102 +8,133 @@
 </head>
 <body>
     <header>
-        <div class="logo">
-            <a href="index.html"><img src="logo.png" alt="DownloadDash Logo" /></a>
+        <div class="header-container">
+            <img src="DownloadDash.jpeg" alt="DownloadDash Logo" class="logo">
+            <div class="header-right">
+                <div class="dropdown">
+                    <button class="dropbtn">Language</button>
+                    <div class="dropdown-content">
+                        <a href="#">English</a>
+                        <a href="#">Spanish</a>
+                        <a href="#">French</a>
+                        <!-- Add more languages here -->
+                    </div>
+                </div>
+                <button id="dark-mode-btn" class="dark-mode-btn">🌙</button>
+                <button class="login-btn">Login</button>
+            </div>
         </div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="how-it-works.html">How It Works</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
+        <h1>DownloadDash - Free Video Downloader</h1>
     </header>
 
     <main>
-        <section class="download-section">
-            <div class="container">
-                <h1>Fast and Free Online Video Downloader</h1>
-                <p>Download your favorite videos in high-quality formats quickly and easily. Just paste the URL and get started!</p>
-                
-                <div class="download-box">
-                    <input type="text" id="videoLink" placeholder="Paste video link here...">
-                    <button onclick="downloadVideo()">Download</button>
-                </div>
-                
-                <!-- Progress bar -->
-                <div class="progress-bar" id="progress-bar">
-                    <div class="progress"></div>
+        <div class="container main-container">
+            <div class="social-media-selection">
+                <label for="social-media">Select Social Media:</label>
+                <div class="social-media-logos">
+                    <img src="youtube.png" alt="YouTube" data-platform="youtube">
+                    <img src="instagram.png" alt="Instagram" data-platform="instagram">
+                    <img src="facebook.png" alt="Facebook" data-platform="facebook">
+                    <img src="twitter.png" alt="Twitter" data-platform="twitter">
+                    <img src="tiktok.png" alt="TikTok" data-platform="tiktok">
                 </div>
             </div>
-        </section>
 
-        <section class="features">
-            <div class="container">
-                <h2>Why DownloadDash?</h2>
-                <div class="feature-grid">
-                    <div class="feature-item">
-                        <h3>Fast Downloads</h3>
-                        <p>Download videos in the best available quality in seconds.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>Supports Multiple Formats</h3>
-                        <p>Get videos in MP4, 3GP, and other formats easily.</p>
-                    </div>
-                    <div class="feature-item">
-                        <h3>Completely Free</h3>
-                        <p>No hidden fees or costs. Use our service free of charge.</p>
-                    </div>
-                </div>
+            <div class="url-input-container">
+                <input type="text" id="video-url" placeholder="Enter video URL">
+                <button id="download-btn">Download Video</button>
             </div>
-        </section>
+
+            <section class="intro-section">
+                <h2>Introduction</h2>
+                <p>
+                    People are fond of watching videos on online video streaming platforms. To watch their favorite content repeatedly, many people try to download videos from the web portals; however, they are unable to do so as most platforms don’t allow direct downloads. 
+                </p>
+                <p>
+                    This is where our <strong>video downloader</strong> plays its role. Our online video downloader is designed to assist users in downloading their desired videos without installing any software or plugin.
+                </p>
+            </section>
+        
+            <section class="content-section">
+                <div class="box">
+                    <strong>Download Your Favorite Videos With Ease - Free!</strong>
+                    <p>
+                        Every minute, hundreds of hours of videos are being uploaded to video-sharing platforms. Whether you want to share them or watch offline, downloading your favorite videos is often necessary.
+                    </p>
+                    <p>
+                        Our downloader lets you easily grab videos from multiple platforms without any limitations.
+                    </p>
+                </div>
+        
+                <div class="box">
+                    <h3>Features of Online Video Downloader</h3>
+                    <ul>
+                        <li><strong>High-Quality Results:</strong> Videos are downloaded in their original quality.</li>
+                        <li><strong>No Installation Required:</strong> It’s completely web-based and works on any device.</li>
+                        <li><strong>Quick & Easy to Use:</strong> Just copy the video link, paste it in the input field, and download it in seconds.</li>
+                        <li><strong>No Watermarks:</strong> Download videos without any watermarks or third-party logos.</li>
+                    </ul>
+                </div>
+        
+                <div class="box">
+                    <h3>How To Download Online Videos</h3>
+                    <p>Follow these simple steps:</p>
+                    <ol>
+                        <li><strong>Step #1:</strong> Copy the video URL.</li>
+                        <li><strong>Step #2:</strong> Enter the video URL in the input box.</li>
+                        <li><strong>Step #3:</strong> Click the "Download Video" button.</li>
+                        <li><strong>Step #4:</strong> Choose the quality and click "Download".</li>
+                    </ol>
+                </div>
+        
+                <div class="box">
+                    <h3>Supported Platforms</h3>
+                    <ul>
+                        <li><strong>Facebook Video Downloader</strong></li>
+                        <li><strong>Instagram Video Downloader</strong></li>
+                        <li><strong>Dailymotion Video Downloader</strong></li>
+                        <li><strong>Vimeo Video Downloader</strong></li>
+                        <li><strong>Twitter Video Downloader</strong></li>
+                    </ul>
+                </div>
+        
+                <div class="box">
+                    <h3>Is it Legal to Download Videos?</h3>
+                    <p>
+                        Downloading videos for personal use is generally acceptable. However, commercial use of downloaded content may violate terms and conditions of certain platforms, especially if the video is copyrighted. Always ensure you're adhering to local copyright laws.
+                    </p>
+                </div>
+            </section>
+        </div>
     </main>
-    <section class="features">
-    <div class="container">
-        <h2>Key Features of Our Online Video Downloader</h2>
-        <div class="feature-grid">
-            <div class="feature-item">
-                <h3>Support for Various Platforms</h3>
-                <p>Our tool works with YouTube, Facebook, Twitter, Instagram, and other popular video platforms.</p>
-            </div>
-            <div class="feature-item">
-                <h3>Download in Multiple Formats</h3>
-                <p>Choose from various formats like MP4, MP3, FLV, and 3GP, to suit your needs.</p>
-            </div>
-            <div class="feature-item">
-                <h3>No Installation Required</h3>
-                <p>It's completely web-based, so you don't need to install any software or plugins.</p>
-            </div>
-        </div>
-    </div>
-</section>
 
-<section class="faq">
-    <div class="container">
-        <h2>Frequently Asked Questions</h2>
-        <div class="faq-item">
-            <h4>How do I use this tool?</h4>
-            <p>Simply copy the URL of the video you want to download, paste it into the input box above, and click "Download Now".</p>
+    <footer class="footer-box"," align = center ">
+        <div class="container footer-container", align = center>
+            <div class="footer-box">
+                <h3>Languages</h3>
+                <p><a href="#">English</a></p>
+                <p><a href="#">Spanish</a></p>
+                <p><a href="#">French</a></p>
+                <!-- Add more languages here -->
+            </div>
+            <div class="footer-box">
+                <h3>Contact Us</h3>
+                <p>Email: <a href="mailto:support@smallseotools.com">support@smallseotools.com</a></p>
+                <p>Address: 438, Streatham High Road, London, UK, SW16 3PX</p>
+            </div>
+            <div class="footer-box">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="#">AI Writing Generators</a></li>
+                    <li><a href="#">Plagiarism Checker</a></li>
+                    <li><a href="#">AI Essay Writer</a></li>
+                    <!-- Add more links here -->
+                </ul>
+            </div>
         </div>
-        <div class="faq-item">
-            <h4>What video formats are supported?</h4>
-            <p>You can download videos in various formats such as MP4, MP3, FLV, and 3GP.</p>
-        </div>
-        <div class="faq-item">
-            <h4>Are there any limitations?</h4>
-            <p>There are no limits on the number of videos you can download. However, you need to make sure the video is not copyrighted without the owner's permission.</p>
-        </div>
-    </div>
-</section>
-
-<footer>
-    <div class="container">
         <p>&copy; 2024 DownloadDash. All rights reserved.</p>
-        <p><a href="privacy-policy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a></p>
-    </div>
-</footer>
+    </footer>
 
-
-    <script src="app.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

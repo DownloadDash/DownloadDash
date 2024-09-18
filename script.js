@@ -1,50 +1,61 @@
-async function downloadVideo() {
-    const videoLink = document.getElementById("videoLink").value;
-    const progressBar = document.getElementById("progress-bar");
-    const progress = progressBar.querySelector(".progress");
+document.addEventListener('DOMContentLoaded', () => {
+    const darkModeToggle = document.getElementById('dark-mode-btn');
+    const body = document.body;
 
-    if (videoLink === "") {
-        alert("Please paste a video link.");
-        return;
-    }
+    // Dark Mode Toggle
+    darkModeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        const isDarkMode = body.classList.contains('dark-mode');
+        darkModeToggle.textContent = isDarkMode ? '🌞' : '🌙';
+    });
 
-    // Show progress bar
-    progressBar.style.display = "block";
+    // Download button functionality
+    const downloadBtn = document.getElementById('download-btn');
+    const videoUrlInput = document.getElementById('video-url');
+    const resultDiv = document.createElement('div');
+    resultDiv.id = 'result';
+    document.querySelector('.url-input-container').appendChild(resultDiv);
 
-    try {
-        // Simulating progress
-        let width = 0;
-        const interval = setInterval(() => {
-            width += 10;
-            progress.style.width = width + "%";
-            if (width >= 100) {
-                clearInterval(interval);
-            }
-        }, 500);
+    downloadBtn.addEventListener('click', () => {
+        const videoUrl = videoUrlInput.value.trim();
+        const platform = document.querySelector('.social-media-logos img.selected')?.dataset.platform;
 
-        // API call to get the download link (replace with actual API)
-        const response = await fetch('13.55.112.219', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({ url: videoLink })
-        });
-        const data = await response.json();
-
-        if (data.status === 'success') {
-            // Create a hidden anchor element to download the file
-            const downloadLink = document.createElement('a');
-            downloadLink.href = data.downloadUrl;
-            downloadLink.setAttribute('download', '');
-            document.body.appendChild(downloadLink);
-            downloadLink.click();
-            document.body.removeChild(downloadLink);
-        } else {
-            alert('Failed to fetch video. Please check the URL.');
+        if (!videoUrl || !platform) {
+            resultDiv.textContent = 'Please select a platform and enter a valid URL.';
+            resultDiv.style.color = 'red';
+            return;
         }
-    } catch (error) {
-        console.error('Error downloading the video:', error);
-        alert('Error fetching the video. Please try again.');
-    }
-}
+
+        resultDiv.textContent = 'Processing...';
+        resultDiv.style.color = 'black';
+
+        // Simulate the download process
+        setTimeout(() => {
+            resultDiv.textContent = 'Download complete!';
+            resultDiv.style.color = 'green';
+        }, 2000);
+
+        // To be replaced with actual download logic
+        // fetch(`/download?platform=${platform}&url=${encodeURIComponent(videoUrl)}`)
+        //     .then(response => response.json())
+        //     .then(data => {
+        //         // Handle the response data
+        //     });
+    });
+
+    // Social media selection
+    document.querySelectorAll('.social-media-logos img').forEach(img => {
+        img.addEventListener('click', () => {
+            document.querySelector('.social-media-logos img.selected')?.classList.remove('selected');
+            img.classList.add('selected');
+            videoUrlInput.focus();
+        });
+    });
+});
+const response = await fetch('https://download-dash-backend.herokuapp.com/download', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ videoURL: url })
+});
